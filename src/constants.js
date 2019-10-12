@@ -1,0 +1,2 @@
+export const SET_VOLUNTEERS = "SET_VOLUNTEERS";
+export const TOGGLE_LOADER = "TOGGLE_LOADER";
