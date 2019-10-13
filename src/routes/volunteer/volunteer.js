@@ -1,4 +1,4 @@
-import React, { useEffect, Fragment } from "react";
+import React, { useEffect } from "react";
 import {
   Loader,
   FlexiTable,
@@ -9,7 +9,6 @@ import {
   Button
 } from "flexibull";
 import { Theme } from "flexibull/build/theme";
-import { Wrapper } from "../../components/wrapper/wrapper";
 import styled from "styled-components";
 
 export const PageTitle = styled.h3`
@@ -29,15 +28,15 @@ const pageOptions = [
   { value: 100, label: "100 Rows" }
 ];
 
-const Volunteer = ({ getVolunteers, volunteers, loading }) => {
+export const Volunteer = ({ getVolunteers, volunteers, loading }) => {
   useEffect(() => {
     getVolunteers({ page: 1, limit: 10 });
   }, []);
   let { docs, totalDocs, page } = volunteers;
   return (
-    <Fragment>
+    <div data-test="volunteer">
       <Boxed pad="5px 0">
-        <PageTitle>Volunteers</PageTitle>
+        <PageTitle data-test="title">Volunteers</PageTitle>
       </Boxed>
       <Boxed>
         <Grid
@@ -84,8 +83,6 @@ const Volunteer = ({ getVolunteers, volunteers, loading }) => {
           </FlexiTable>
         )}
       </Boxed>
-    </Fragment>
+    </div>
   );
 };
-
-export default Volunteer;

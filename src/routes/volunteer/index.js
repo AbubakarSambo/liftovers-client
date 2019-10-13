@@ -1,4 +1,4 @@
-import Volunteer from "./volunteer";
+import { Volunteer } from "./volunteer";
 import { connect } from "react-redux";
 import { getVolunteers } from "../../actions/volunteer";
 function mapStateToProps(state) {
