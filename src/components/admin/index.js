@@ -13,7 +13,7 @@ import styled from "styled-components";
 import NavigationList from "../../menu";
 
 const Logo = styled.img`
-  height: 40px !important;
+  height: 90px !important;
 `;
 
 export class AdminLayout extends Component {
