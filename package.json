@@ -17,7 +17,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test:all": "set CI=true && react-scripts test",
+    "test:all": "CI=true react-scripts-ts test",
     "prepush": "yarn run test",
     "eject": "react-scripts eject"
   },
