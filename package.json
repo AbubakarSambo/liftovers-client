@@ -18,11 +18,15 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test:all": "CI=true react-scripts-ts test",
-    "prepush": "yarn run test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "yarn test:all"
+    }
   },
   "browserslist": {
     "production": [
